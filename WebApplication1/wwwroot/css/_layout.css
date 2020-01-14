@@ -1,0 +1,23 @@
+﻿body {
+}
+.btn-box25 {
+    background-color: blue;
+    border-color: transparent;
+    display: inline-block;
+}
+
+#ml-button {
+    background-color: #fff159;
+    border-color: transparent;
+    color: #252e7c;
+}
+
+#config-button {
+    background-color: lavender;
+    border-color: transparent;
+}
+
+#prov-button {
+    background-color: darkolivegreen;
+    color: #000;
+}

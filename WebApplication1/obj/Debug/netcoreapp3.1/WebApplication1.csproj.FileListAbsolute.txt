@@ -166,3 +166,8 @@ F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\R
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductProducts\Details.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductProducts\Edit.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductProducts\Index.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Create.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Delete.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Details.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Edit.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Index.cshtml.g.cs
