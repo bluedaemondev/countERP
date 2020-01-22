@@ -6,73 +6,93 @@
 
 <h1>Crear</h1>
 
-<h4>Empresa nueva</h4>
+<h4 class="d-inline" style="padding-top:1.5em;">Empresa nueva</h4>
+<div class="d-inline-flex alert-info">
+    <p style="padding-left: 1em; padding-right:1em;">
+        Bienvenido al sistema CountERP. Por favor, llene los campos y luego presione el botón
+        <span class="text-success">Crear</span>, en la parte inferior de esta página. Las
+        <span class="text-danger">Empresas</span> juntan información sobre su negocio
+        para completar presupuestos y otros documentos útiles.
+    </p>
+</div>
 <hr />
 <div class="form-center">
-    <div class="alert-info">
-        <p>
-            Bienvenido al sistema CountERP. Por favor, llene los campos y luego presione el botón
-            <span class="text-success">Crear</span>, en la parte inferior de esta página. Las
-            <span class="text-danger">Empresas</span> juntan información sobre su negocio
-            para completar presupuestos y otros documentos útiles.
-        </p>
+    <div>
+        <details>
+            <p>Información editable con restricciones. Por favor, revise todos los campos antes de 
+            confirmar esta empresa.</p>
+        </details>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div class="text-center align-content-stretch">
+    <form asp-action="Create">
+        <div class="row">
+            <div class="col-6">
+                <div class="text-md-left" style="margin-left:1em;">
+                    <div class="">
+                        <div class="form-group">
+                            <label asp-for="Phone" class="control-label">Teléfono</label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" hidden="hidden">
+                            <label asp-for="Phone2" class="control-label">Teléfono secundario</label>
+                            <input asp-for="Phone2" class="form-control" />
+                            <span asp-validation-for="Phone2" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CState" class="control-label">Provincia:</label>
+                            <input asp-for="CState" class="form-control" />
+                            <span asp-validation-for="CState" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CCountry" class="control-label">País:</label>
+                            <input asp-for="CCountry" class="form-control" />
+                            <span asp-validation-for="CCountry" class="text-danger"></span>
+                            <div class="form-group badge">
+                                <label asp-for="Active" class="control-label">Activo</label>
+                                <input type="checkbox" data-val="true" id="active" name="Active" value="true">
+                                <span asp-validation-for="Active" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="margin-right:1em; " class="text-md-left">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
-                        <label asp-for="Name" class="control-label"></label>
-                        <input asp-for="Name" class="form-control" />
-                        <span asp-validation-for="Name" class="text-danger"></span>
+                    <div class="">
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label">Nombre:</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Vat" class="control-label">CUIT:</label>
+                            <input asp-for="Vat" class="form-control" />
+                            <span asp-validation-for="Vat" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Street" class="control-label">Dirección</label>
+                            <input asp-for="Street" class="form-control" />
+                            <span asp-validation-for="Street" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Street2" class="control-label">Dirección alternativa</label>
+                            <input asp-for="Street2" class="form-control" />
+                            <span asp-validation-for="Street2" class="text-danger"></span>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Vat" class="control-label">CUIT</label>
-                        <input asp-for="Vat" class="form-control" />
-                        <span asp-validation-for="Vat" class="text-danger"></span>
-                    </div>
-                    <div class="d-inline-block">
-                        <label asp-for="Street" class="control-label"></label>
-                        <input asp-for="Street" class="form-control" />
-                        <span asp-validation-for="Street" class="text-danger"></span>
-                    </div>
-                    <div class="d-inline-block">
-                        <label asp-for="Street2" class="control-label"></label>
-                        <input asp-for="Street2" class="form-control" />
-                        <span asp-validation-for="Street2" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Phone" class="control-label"></label>
-                        <input asp-for="Phone" class="form-control" />
-                        <span asp-validation-for="Phone" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Phone2" class="control-label"></label>
-                        <input asp-for="Phone2" class="form-control" />
-                        <span asp-validation-for="Phone2" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="CState" class="control-label"></label>
-                        <input asp-for="CState" class="form-control" />
-                        <span asp-validation-for="CState" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="CCountry" class="control-label"></label>
-                        <input asp-for="CCountry" class="form-control" />
-                        <span asp-validation-for="CCountry" class="text-danger"></span>
+                        <input type="submit" value="Create" class="btn btn-primary" />
                     </div>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
+            </div>
         </div>
+    </form>
+    <div>
+        <a asp-action="Index">Volver a la lista</a>
     </div>
 </div>
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
