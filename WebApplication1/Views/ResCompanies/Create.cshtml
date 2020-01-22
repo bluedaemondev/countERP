@@ -4,56 +4,72 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
-<h4>ResCompany</h4>
+<h4>Empresa nueva</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Vat" class="control-label"></label>
-                <input asp-for="Vat" class="form-control" />
-                <span asp-validation-for="Vat" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Street" class="control-label"></label>
-                <input asp-for="Street" class="form-control" />
-                <span asp-validation-for="Street" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Street2" class="control-label"></label>
-                <input asp-for="Street2" class="form-control" />
-                <span asp-validation-for="Street2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone2" class="control-label"></label>
-                <input asp-for="Phone2" class="form-control" />
-                <span asp-validation-for="Phone2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CState" class="control-label"></label>
-                <input asp-for="CState" class="form-control" />
-                <span asp-validation-for="CState" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CCountry" class="control-label"></label>
-                <input asp-for="CCountry" class="form-control" />
-                <span asp-validation-for="CCountry" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="form-center">
+    <div class="alert-info">
+        <p>
+            Bienvenido al sistema CountERP. Por favor, llene los campos y luego presione el botón
+            <span class="text-success">Crear</span>, en la parte inferior de esta página. Las
+            <span class="text-danger">Empresas</span> juntan información sobre su negocio
+            para completar presupuestos y otros documentos útiles.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div class="text-center align-content-stretch">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vat" class="control-label">CUIT</label>
+                        <input asp-for="Vat" class="form-control" />
+                        <span asp-validation-for="Vat" class="text-danger"></span>
+                    </div>
+                    <div class="d-inline-block">
+                        <label asp-for="Street" class="control-label"></label>
+                        <input asp-for="Street" class="form-control" />
+                        <span asp-validation-for="Street" class="text-danger"></span>
+                    </div>
+                    <div class="d-inline-block">
+                        <label asp-for="Street2" class="control-label"></label>
+                        <input asp-for="Street2" class="form-control" />
+                        <span asp-validation-for="Street2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone2" class="control-label"></label>
+                        <input asp-for="Phone2" class="form-control" />
+                        <span asp-validation-for="Phone2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CState" class="control-label"></label>
+                        <input asp-for="CState" class="form-control" />
+                        <span asp-validation-for="CState" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CCountry" class="control-label"></label>
+                        <input asp-for="CCountry" class="form-control" />
+                        <span asp-validation-for="CCountry" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

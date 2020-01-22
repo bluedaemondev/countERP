@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es-ar">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/_layout.css" />
     <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/form-styles.css" />
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v5.0"></script>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -28,6 +32,19 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Realizar un presupuesto</a>
                                 <a class="dropdown-item" href="#">Ver listado</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Estadisticas del mes</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown d-sm-inline-flex">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Ver Productos</a>
+                                <a class="dropdown-item" href="#">Ver Variantes</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Categorias</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Control de Stock</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Estadisticas del mes</a>
                             </div>
@@ -58,32 +75,36 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <!--Facebook-->
-                            <button type="button" class="btn-primary">Facebook</button>
+                            <button type="button" class="btn-primary"><a id="l-facebook" style="color:white;" href="https://www.facebook.com/ferreteroMC/inbox/?mailbox_id=188346095304615&selected_item_id=100001053257816">Facebook</a></button>
                         </li>
                         <li class="nav-item">
                             <!--Mercadolibre-->
-                            <button type="button" class="btn-primary" id="ml-button">MercadoLibre</button>
+                            <button type="button" class="btn-primary" id="ml-button"><a href="https://www.mercadolibre.com.ar/">MercadoLibre</a></button>
                         </li>
-                            <button type="button" class="btn-primary" id="config-button">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">
                                 <svg id="config-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path d="M24 13.306v-2.612l-2.452-.614c-.081-.407-.188-.805-.318-1.192l1.815-1.756-1.306-2.263-2.432.695c-.272-.309-.562-.599-.871-.871l.695-2.432-2.263-1.306-1.756 1.815c-.387-.13-.785-.237-1.192-.318l-.614-2.452h-2.612l-.614 2.452c-.407.081-.805.188-1.192.319l-1.757-1.816-2.262 1.306.695 2.433c-.309.271-.599.562-.871.87l-2.432-.695-1.306 2.262 1.815 1.757c-.13.387-.237.785-.318 1.192l-2.452.614v2.612l2.452.614c.082.407.188.805.318 1.192l-1.815 1.756 1.306 2.263 2.432-.695c.272.308.562.599.871.871l-.695 2.432 2.263 1.306 1.756-1.816c.387.131.785.237 1.192.319l.614 2.452h2.612l.614-2.452c.407-.082.805-.188 1.192-.319l1.756 1.816 2.263-1.306-.695-2.432c.309-.272.599-.563.871-.871l2.432.695 1.306-2.263-1.815-1.756c.131-.387.237-.785.318-1.192l2.452-.614zm-12 2.694c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z" />
                                 </svg>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <div id="collapsible-fb-ml" class="float-left position-fixed">
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - CountERP - blackmood games &amp; systems. All rights reserved.<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - CountERP - blackmood games &amp; systems. All rights reserved.
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">|| Privacy</a>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">| Manual de ayuda</a>
+            <a href="https://www.facebook.com/blackmoodgames/">| Página de blackmoodgames &amp; systems</a>
+            <a href="mailto:blackmoodgames@gmail.com">| Enviar correo a Soporte</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -13,27 +13,27 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Vat" class="control-label"></label>
+                <label asp-for="Vat" class="control-label">CUIT/CUIL</label>
                 <input asp-for="Vat" class="form-control" />
                 <span asp-validation-for="Vat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Street" class="control-label"></label>
+                <label asp-for="Street" class="control-label">Dirección</label>
                 <input asp-for="Street" class="form-control" />
                 <span asp-validation-for="Street" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IsCustomer" class="control-label"></label>
+                <label asp-for="IsCustomer" class="control-label">Es cliente</label>
                 <input asp-for="IsCustomer" class="form-control" />
                 <span asp-validation-for="IsCustomer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IsProvider" class="control-label"></label>
+                <label asp-for="IsProvider" class="control-label">Es proveedor</label>
                 <input asp-for="IsProvider" class="form-control" />
                 <span asp-validation-for="IsProvider" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>

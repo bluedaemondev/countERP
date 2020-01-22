@@ -1,4 +1,4 @@
-﻿body {
+body {
 }
 .btn-box25 {
     background-color: blue;
@@ -15,9 +15,13 @@
 #config-button {
     background-color: lavender;
     border-color: transparent;
+    margin-left: 20px;
 }
 
 #prov-button {
     background-color: darkolivegreen;
     color: #000;
+}
+.w-15{
+    width: 15% !important;
 }
