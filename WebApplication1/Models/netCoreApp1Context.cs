@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using System;
 
 namespace WebApplication1.Models
 {
@@ -36,6 +36,10 @@ namespace WebApplication1.Models
         public virtual DbSet<SoLineInvoiceRel> SoLineInvoiceRel { get; set; }
         public virtual DbSet<Tax> Tax { get; set; }
         public virtual DbSet<Uom> Uom { get; set; }
+        
+        // 1 - Cargar nuevos modelos como DbSet.
+        public virtual DbSet<Currency> Currencies { get; set; }
+        public virtual DbSet<CurrencyRate> CurencyRates { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -45,9 +49,119 @@ namespace WebApplication1.Models
                 optionsBuilder.UseSqlServer("Server=DESKTOP-SL1CSDN\\SQLEXPRESS;Database=netCoreApp1;User=sa;Password=admin");
             }
         }
-
+        // 2 - Crear las entidades de los nuevos Modelos.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            /* ///EJEMPLO///
+             * 
+            modelBuilder.Entity<Currency>(entity =>
+            {
+              
+                entity.ToTable("res_currency");
+               
+                entity.HasKey(c => c.Id);
+                
+                entity.Property(c => c.Id).HasColumnName("id");
+                
+                entity.Property(c => c.Name)
+                .HasColumnName("name")
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                });
+             */
+
+
+            modelBuilder.Entity<Currency>(entity =>
+            {
+                entity.ToTable("res_currency");
+                
+                entity.HasKey(c => c.Id);
+                
+                entity.Property(c => c.Id).HasColumnName("id");
+
+                entity.Property(c => c.Name)
+                .HasColumnName("name")
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entity.Property(c => c.Active)
+                .HasColumnName("active")
+                .IsRequired()
+                .HasDefaultValueSql("((1))");
+
+                entity.Property(c => c.Code)
+                .HasColumnName("code")
+                .IsRequired()
+                .HasMaxLength(4)
+                .IsUnicode(false);
+
+                entity.Property(c => c.Create_uid)
+                .HasColumnName("create_uid")
+                .IsRequired();
+                entity.Property(c => c.Write_uid)
+                .HasColumnName("write_uid")
+                .IsRequired();
+                entity.Property(c => c.Create_date)
+                .HasColumnName("create_date")
+                .IsRequired();
+                entity.Property(c => c.Write_date)
+                .HasColumnName("write_date")
+                .IsRequired();
+
+                entity.HasIndex(e => e.Name)
+                .IsUnique();
+            });
+            modelBuilder.Entity<CurrencyRate>(entity =>
+            {
+                entity.ToTable("res_currency_rate");
+
+                entity.HasKey(c => c.Id);
+
+                entity.Property(c => c.Id).HasColumnName("id");
+
+                entity.Property(c => c.Date)
+                .HasColumnName("name")
+                .IsRequired()
+                .HasDefaultValueSql("(getdate())")
+                .IsUnicode(false);
+
+                entity.Property(c => c.Ratio)
+                .HasColumnName("ratio")
+                .IsRequired()
+                .IsUnicode(false);
+
+                entity.Property(c => c.Active)
+                .HasColumnName("active")
+                .IsRequired()
+                //set to true
+                .HasDefaultValueSql("((1))");
+
+                entity.Property(c => c.Create_uid)
+                .HasColumnName("create_uid")
+                .IsRequired();
+                entity.Property(c => c.Write_uid)
+                .HasColumnName("write_uid")
+                .IsRequired();
+                entity.Property(c => c.Create_date)
+                .HasColumnName("create_date")
+                .IsRequired();
+                entity.Property(c => c.Write_date)
+                .HasColumnName("write_date")
+                .IsRequired();
+
+                entity.HasIndex(e => e.Date)
+                .IsUnique();
+
+                entity.HasOne(cr => cr.Currency)
+                    .WithMany(c => c.Ratios)
+                    .HasForeignKey(cr => cr.Currency_id)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__res_currency_i__currency_rate__60A75C0F");
+            });
+
             modelBuilder.Entity<AccountInvoice>(entity =>
             {
                 entity.ToTable("account_invoice");

@@ -34,7 +34,7 @@ namespace WebApplication1.Views
             }
 
             var productProduct = await _context.ProductProduct
-                .Include(p => p.PrdTemplate)
+                .Include(p => p.Id)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (productProduct == null)
             {

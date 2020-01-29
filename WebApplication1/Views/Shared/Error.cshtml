@@ -4,7 +4,21 @@
 }
 
 <h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h2 class="text-danger">Un error se produjo. No temáis!</h2>
+<div class="alert-info">
+    <div class="spinner-grow spinner-grow-sm" role="status">
+        <span class="sr-only">...</span>
+    </div>
+    <p>Por favor, envie un correo a soporte informando sobre este error. Se revisará y corregirá lo antes posible.</p>
+    <div class="row">
+        <div class="col">Datos importantes a enviar para un correcto entendimiento :</div>
+        <div class="col">Sea descriptivo en el procedimiento que siguió para llegar a este punto. Dónde hizo click,
+        A qué entidad accedio, etc.
+        Contáctenos en <a class="e" href="mailto:blackmoodgames@gmail.com"> Enviar correo a Soporte</a>
+        <datalist></datalist>
+        </div>
+    </div>
+</div>
 
 @if (Model.ShowRequestId)
 {

@@ -145,7 +145,6 @@ F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\r
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductCategories\Create.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductCategories\Delete.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ProductCategories\Details.cshtml.g.cs
@@ -171,3 +170,15 @@ F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\R
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Details.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Edit.cshtml.g.cs
 F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\ResPartners\Index.cshtml.g.cs
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\EntityFramework.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\_repos\webAppCourse\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
