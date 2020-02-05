@@ -13,6 +13,12 @@ namespace WebApplication1.Models
         public bool? Active { get; set; }
         public virtual Currency currency { get; set; }
         public virtual ProductTemplate PrdTemplate { get; set; }
+        public string Description { get; set; }
+        public decimal list_price { get; set; }
+        public decimal taxedPrice { get; set; }
+        public virtual Tax tax_id { get; set; }
+        public float qty_available { get; set; }
+        public float qty_virtual { get; set; }
         public int Create_uid { get; set; }
         public int Write_uid { get; set; }
         public DateTime Write_date { get; set; }

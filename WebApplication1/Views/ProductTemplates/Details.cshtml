@@ -4,44 +4,115 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>ProductTemplate</h4>
+    <div class="container-fluid">
+        <div class="flex-xl-grow-1">
+            <div class="col-lg">
+                <h1>@Html.DisplayFor(model => model.Name)</h1>
+                <h4><a asp-controller="ProductCategories" asp-action="Index">Categorias</a> > <a asp-controller="ProductCategories" asp-action="Details/@this.Model.ProductCategory.Id">@Html.DisplayNameFor(model => model.ProductCategory.Name)</a> > <a href="#">@Html.DisplayFor(model => model.Name)</a> </h4>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col">
+                        <p>Precio en efectivo</p>
+                        <p>Precio con tarjeta</p>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <p>$ @Html.DisplayFor(model => model.list_price)</p>
+                        <p>$ @Html.DisplayFor(model => model.taxedPrice)</p>
+                    </div>
+                    <div class="col-sm" id="buttonNav">
+                        <a class="btn-primary border row" style="padding: 0.5em;" href="#">Desactivar producto</a>
+                        <a class="btn-primary border row" style="padding: 0.5em;" href="#">Recalcular U$D => AR$</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
+    <div class="">
+        <div class="row">
+            <div class="col-9 col-sm-6 col-lg-8" style="padding-left: 2em;">
+                <img src="https://picsum.photos/352/420/" alt="Imagen del producto" />
+            </div>
+            <div class="col" style="margin-left: 2em;">
+                <div class="row">
+                    <dl>
+                        <dt id="lbl-name">
+                            @Html.DisplayNameFor(model => model.Name) :
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt id="lbl-descr">
+                            @Html.DisplayNameFor(model => model.Description) :
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt id="lbl-categ">
+                            @Html.DisplayNameFor(model => model.ProductCategory.Name) :
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ProductCategory.Name)
+                        </dd>
+                        <dt id="lbl-name">
+                            @Html.DisplayNameFor(model => model.ProductCategory.Name) :
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ProductCategory.Name)
+                        </dd>
+                        <dt id="lbl-name">
+                            @Html.DisplayNameFor(model => model.ProductCategory.Name) :
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ProductCategory.Name)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row">
+                    <p>This is the bottom right pannel, which will be filled with great stuff. A widget, maybe !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+            <div id="imgProduct" class="col">
+                <div><img src="https://picsum.photos/540/540/" alt="Imagen del producto" /></div>
+            </div>
+            <div class="col">
+                <a href="#">here starts the shit</a>
+                <hr />
+<!--<div class="col">
+
             @Html.DisplayNameFor(model => model.DateCreated)
-        </dt>
-        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
             @Html.DisplayFor(model => model.DateCreated)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Active)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProductCategory)
-        </dt>
-        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Active) <br />
+            @Html.DisplayNameFor(model => model.ProductCategory.Name)
             @Html.DisplayFor(model => model.ProductCategory.Descr)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Uom)
-        </dt>
-        <dd class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.Uom) <br />
             @Html.DisplayFor(model => model.Uom.Descr)
-        </dd>
-    </dl>
-</div>
+        </div>
+
+        <div class="col" id="pnl-left-fields">
+            <p>Nulla et metus est. Aliquam rhoncus mauris vel velit euismod pretium. Nulla egestas, justo eget vehicula vestibulum, dolor est ultricies nulla, id pulvinar ex ligula vel nibh. Maecenas convallis viverra pulvinar. In posuere neque non pretium lobortis. Suspendisse vel diam non nulla scelerisque consequat. Cras egestas blandit erat, a mollis neque euismod et. Nulla tortor nisi, malesuada a sapien non, consequat lobortis turpis. Fusce feugiat sem vitae nisi semper, varius tincidunt diam placerat. Sed porta semper nulla at gravida. Praesent euismod porttitor rhoncus. Quisque faucibus diam mi, a auctor nibh commodo et. Ut non est eget dolor imperdiet euismod a sit amet dolor. Integer eget sollicitudin dolor.</p>
+        </div>
+        <div class="col-" id="pnl-right-fields">
+            <div class="row" id="top-pnl-fields">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu varius mauris, eu bibendum massa. Donec odio sem, rutrum vitae tincidunt et, blandit maximus nisi. Nam lacinia, dui at iaculis varius, eros elit varius mauris, sit amet vulputate leo felis nec purus. Nullam nec cursus turpis, in suscipit neque. Cras gravida luctus ipsum non vehicula. Suspendisse imperdiet, odio eget volutpat vehicula, diam odio condimentum nunc, nec commodo eros mauris a velit. Vivamus eget arcu eu nisl luctus rhoncus. In aliquet sagittis auctor. Cras blandit justo dui, vitae tincidunt ante fermentum vel.</p>
+            </div>
+            <div class="row" id="bot-pnl-fields">
+                <p>Nullam eget mi quis orci tempor vehicula aliquet eu erat. Quisque commodo, mi vitae varius consectetur, arcu turpis interdum justo, ut varius mauris elit euismod orci. Suspendisse scelerisque nulla sodales gravida porttitor. Aenean consectetur at ex id interdum. Pellentesque sed faucibus ante. Proin at sapien tempor, euismod augue non, finibus arcu. Donec congue urna imperdiet orci tempor venenatis. Pellentesque justo sem, bibendum id ante porttitor, mattis pharetra nisl. Aenean facilisis risus id scelerisque sollicitudin.</p>
+            </div>
+        </div>
+
+    </div>
+            -->
+            </div>
+
+    </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
