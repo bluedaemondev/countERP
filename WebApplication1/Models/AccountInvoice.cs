@@ -15,9 +15,11 @@ namespace WebApplication1.Models
         public string Name { get; set; }
         public string State { get; set; }
         public int OrderId { get; set; }
+        public int TaxId { get; set; }
         public bool? Active { get; set; }
         public DateTime? DateCreated { get; set; }
 
+        public virtual Tax Tax { get; set; }
         public virtual SaleOrder Order { get; set; }
         public virtual ICollection<AccountInvoiceLine> AccountInvoiceLine { get; set; }
         public virtual ICollection<SoLineInvoiceRel> SoLineInvoiceRel { get; set; }

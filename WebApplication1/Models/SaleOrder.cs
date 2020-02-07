@@ -15,10 +15,12 @@ namespace WebApplication1.Models
         public string Name { get; set; }
         public string State { get; set; }
         public int PaymentId { get; set; }
+        public int CurrencyId { get; set; }
         public bool? Active { get; set; }
         public DateTime? DateCreated { get; set; }
 
         public virtual Payment Payment { get; set; }
+        public virtual Currency Currency { get; set; }
         public virtual ICollection<AccountInvoice> AccountInvoice { get; set; }
         public virtual ICollection<SoLineInvoiceRel> SoLineInvoiceRel { get; set; }
     }
